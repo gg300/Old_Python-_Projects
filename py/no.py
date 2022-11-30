@@ -22,15 +22,27 @@
 
 # print (b)
 from tkinter import *
-class only_butts:
-    def __init__(self,root):
+def prento(kaka):
+    print(kaka)
+
+# button['text']  ???????////////////////
+ 
+class loloboton:
+    def __init__(self,root,msg:str,kaka,i:int,j:int) -> None:
         self.root = root
-    def cre_but(self,but:str,x,y):
-        butt = Button(self,text=but,padx=20,pady=20)
-        butt.grid(x,y)
+        self.kaka = kaka
+        self.msg=msg
+        self.i=i
+        self.j=j
+    def lolo_butonu(self):
+        button = Button(self.root,text=self.msg,padx=20,pady=20,command=prento(self.kaka))
+        button.grid(row=self.i,column=self.j)
+        
 root = Tk()
-for i in range(2):
-    for j in range (3):
-        butt = only_butts(root)
-        butt.cre_but("lolo",i,j)
+koko=0
+for i in range(8):
+    for j in range (8):
+        koko+=1
+        hahu = loloboton(root,str(koko),koko,i,j)
+        hahu.lolo_butonu()
 root.mainloop()
