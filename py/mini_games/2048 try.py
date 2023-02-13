@@ -1,22 +1,22 @@
 import random
 x=(1,2,3,4)
 y=(2,4)
-board=[[0 for i in range(1,5)] for x in range(1,5)]
+board=[[0 for i in range(0,4)] for i in range(0,4)]
 def inputt():
-        x=input()
-        if x == 'a':
+        inputo=input()
+        if inputo == 'a':
             print(" ")
             for rows in board:
                 print(rows)
-        if x == 'd':
+        if inputo == 'd':
             print(" ")
             for rows in board:
                 print(rows)
-        if x == 'w':
+        if inputo == 'w':
             print(" ")
             for rows in board:
                 print(rows)
-        if x == 's':
+        if inputo == 's':
             print(" ")
             for rows in board:
                 print(rows)
@@ -51,15 +51,14 @@ for rows in board:
 #     x
 # if x == y:
 #     x+y
-for i in range (4):
-    for j in range(4,0,-1):
+for i in range (0,4):
+    for j in range(4,0):
         board[i][j]
-    print(board[0][i-1])
 
 
     
 
 while True:
-    break
     inputt()
     random_poz()
+    break
